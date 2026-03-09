@@ -49,6 +49,6 @@ CASE3:
   jal zero, MAIN
 
 DEFAULT:
-  and s3 s1, s2 #compuerta AND donde c puede valer 0 o 1
+  and s3, s1, s2 #compuerta AND donde hace la compuerta AND bit por bit de s1 y s2, ex. s1=2=10, s2=1=01, s1ANDs2=s3 ; s3=decima, 0=00 binario
   sw s3, 12(t0) #escribir el 0 o 1 en el espacio de RAM de C
   jal zero, MAIN
